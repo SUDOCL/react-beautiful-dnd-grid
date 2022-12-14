@@ -17,13 +17,13 @@ function copyProps(src, target) {
 
 global["window"] = window;
 global["document"] = window.document;
-global["navigator"] = {
+/*global["navigator"] = {
   userAgent: "node.js"
-};
-global["requestAnimationFrame"] = function(callback) {
+};*/
+global["requestAnimationFrame"] = function (callback) {
   return setTimeout(callback, 0);
 };
-global["cancelAnimationFrame"] = function(id) {
+global["cancelAnimationFrame"] = function (id) {
   clearTimeout(id);
 };
 copyProps(window, global);
